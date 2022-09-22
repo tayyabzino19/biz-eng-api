@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversation_categories",
+  "info": {
+    "singularName": "conversation-category",
+    "pluralName": "conversation-categories",
+    "displayName": "conversation_category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image_name": {
+      "type": "string"
+    },
+    "isBeginner": {
+      "type": "boolean"
+    },
+    "conversations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::conversation.conversation",
+      "mappedBy": "conversation_category"
+    }
+  }
+}

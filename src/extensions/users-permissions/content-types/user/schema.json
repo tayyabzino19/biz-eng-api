@@ -81,12 +81,6 @@
     "img_url": {
       "type": "string"
     },
-    "comment_reply_like": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::comment-reply-like.comment-reply-like",
-      "inversedBy": "users_permissions_user"
-    },
     "comment_replies": {
       "type": "relation",
       "relation": "oneToMany",
@@ -105,6 +99,15 @@
     "open_id": {
       "type": "string",
       "private": true
+    },
+    "notificationToken": {
+      "type": "string"
+    },
+    "isPremium": {
+      "type": "boolean"
+    },
+    "chat_token": {
+      "type": "string"
     }
   }
 }

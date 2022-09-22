@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'we-help-api',
+      name: 'bizeng-api',
       script: 'npm',
       args: 'start',
       env: {

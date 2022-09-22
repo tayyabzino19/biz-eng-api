@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversation_messages",
+  "info": {
+    "singularName": "conversation-message",
+    "pluralName": "conversation-messages",
+    "displayName": "conversation-message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "isMale": {
+      "type": "boolean"
+    },
+    "conversation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::conversation.conversation",
+      "inversedBy": "conversation_messages"
+    }
+  }
+}

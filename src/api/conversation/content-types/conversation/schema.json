@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversations",
+  "info": {
+    "singularName": "conversation",
+    "pluralName": "conversations",
+    "displayName": "conversation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "conversation_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::conversation-category.conversation-category",
+      "inversedBy": "conversations"
+    },
+    "conversation_messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::conversation-message.conversation-message",
+      "mappedBy": "conversation"
+    }
+  }
+}
